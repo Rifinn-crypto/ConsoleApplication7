@@ -192,15 +192,25 @@ int main()
 					if (m1 == 50)
 					{
 						system("cls");
+
+						type a = 0, b = 0;
+						std::cout << "Real part x: ";
+						std::cin >> a;
+						std::cout << "Image part x: ";
+						std::cin >> b;
+						std::complex<type> X(a, b);
+						std::cout << "Real part y: ";
+						std::cin >> a;
+						std::cout << "Image part y: ";
+						std::cin >> b;
+						std::complex<type> Y(a, b);
+						//Point<tt> p(X, Y);
 						Point<tt> p;
-						/*std::cout << "Enter the coordinates of the point" << std::endl;
-						std::cout << "Enter x: " << std::endl;
-						std::cin >> p.x;
-						std::cout << "Enter y: " << std::endl;
-						std::cin >> p.y;*/
+						p.x = X;
+						p.y = Y;
 						try
 						{
-							//line_2 + p;
+							line_2 + p;
 							//std::cin.get();
 						}
 						catch (const char* err)
@@ -431,306 +441,373 @@ int main()
 		}
 	}
 	case 50:
+	{using type = double;
+	PolyLine<collection2> line_1, line_2, line_3;
+	while (true)
 	{
-		using type = double;
-		PolyLine<collection2> line_1, line_2, line_3;
-		while (true)
+		system("cls");
+		int m = Menu();
+		if (m == 27)
+		{
+			break;
+		}
+		if (m == 49)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+
+					type a = 0, b = 0;
+					std::cout << "Real part x: ";
+					std::cin >> a;
+					std::cout << "Image part x: ";
+					std::cin >> b;
+					std::complex<type> X(a, b);
+					std::cout << "Real part y: ";
+					std::cin >> a;
+					std::cout << "Image part y: ";
+					std::cin >> b;
+					std::complex<type> Y(a, b);
+					//Point<tt> p(X, Y);
+					Point<collection2> p;
+					p.x = X;
+					p.y = Y;
+					try
+					{
+
+						line_1 += p;
+
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+					}
+
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					type a = 0, b = 0;
+					std::cout << "Real part x: ";
+					std::cin >> a;
+					std::cout << "Image part x: ";
+					std::cin >> b;
+					std::complex<type> X(a, b);
+					std::cout << "Real part y: ";
+					std::cin >> a;
+					std::cout << "Image part y: ";
+					std::cin >> b;
+					std::complex<type> Y(a, b);
+					//Point<tt> p(X, Y);
+					Point<collection2> p;
+					p.x = X;
+					p.y = Y;
+					try
+					{
+
+						line_1 += p;
+
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+					}
+
+				}
+			}
+		}
+		if (m == 50)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+
+					type a = 0, b = 0;
+					std::cout << "Real part x: ";
+					std::cin >> a;
+					std::cout << "Image part x: ";
+					std::cin >> b;
+					std::complex<type> X(a, b);
+					std::cout << "Real part y: ";
+					std::cin >> a;
+					std::cout << "Image part y: ";
+					std::cin >> b;
+					std::complex<type> Y(a, b);
+					//Point<tt> p(X, Y);
+					Point<collection2> p;
+					p.x = X;
+					p.y = Y;
+					try
+					{
+						line_1 + p;
+						//std::cin.get();
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+					}
+					//std::cin.get();
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+
+					type a = 0, b = 0;
+					std::cout << "Real part x: ";
+					std::cin >> a;
+					std::cout << "Image part x: ";
+					std::cin >> b;
+					std::complex<type> X(a, b);
+					std::cout << "Real part y: ";
+					std::cin >> a;
+					std::cout << "Image part y: ";
+					std::cin >> b;
+					std::complex<type> Y(a, b);
+					//Point<tt> p(X, Y);
+					Point<collection2> p;
+					p.x = X;
+					p.y = Y;
+					try
+					{
+						line_2 + p;
+						//std::cin.get();
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+					}
+					//std::cin.get();
+				}
+			}
+		}
+		if (m == 51)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+					try
+					{
+						std::cout << line_1 << std::endl;
+						std::cout << "Line_1 lenght : " << line_1.GetLenght() << std::endl;
+						std::cin.get();
+					}
+					catch (std::exception& ex)
+					{
+						std::cout << ex.what() << std::endl;
+					}
+					std::cin.get();
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					try
+					{
+						std::cout << line_2 << std::endl;
+						std::cout << "Line_2 lenght : " << line_2.GetLenght() << std::endl;
+						std::cin.get();
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+					}
+					std::cin.get();
+				}
+			}
+		}
+		if (m == 52)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+					std::cout << line_1 << std::endl;
+					std::cin.get();
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					std::cout << line_2 << std::endl;
+					std::cin.get();
+				}
+			}
+		}
+		if (m == 53)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+					std::cout << "Enter index of element: " << std::endl;
+					int index;
+					std::cin >> index;
+					try
+					{
+						std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
+						std::cout << "Enter new value: " << std::endl;
+						std::cin >> line_1[index].x;
+						std::cin >> line_1[index].y;
+						std::cin.get();
+
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+						std::cin.get();
+						std::cin.get();
+					}
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					std::cout << "Enter index of element: " << std::endl;
+					int index;
+					std::cin >> index;
+					try
+					{
+						std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
+						std::cout << "Enter new value: " << std::endl;
+						std::cin >> line_2[index].x;
+						std::cin >> line_2[index].y;
+						std::cin.get();
+
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+						std::cin.get();
+						std::cin.get();
+					}
+				}
+			}
+		}
+		if (m == 54)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+					std::cout << "Enter index of element: " << std::endl;
+					int index;
+					std::cin >> index;
+					try
+					{
+						std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
+						std::cin.get();
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+						std::cin.get();
+						std::cin.get();
+					}
+					std::cin.get();
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					std::cout << "Enter index of element: " << std::endl;
+					int index;
+					std::cin >> index;
+					try
+					{
+						std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
+						std::cin.get();
+					}
+					catch (const char* err)
+					{
+						std::cout << err << std::endl;
+						std::cin.get();
+						std::cin.get();
+					}
+					std::cin.get();
+				}
+			}
+		}
+		if (m == 55)
+		{
+			while (true)
+			{
+				system("cls");
+				int m1 = Menu_1();
+				if (m1 == 27) break;
+				if (m1 == 49)
+				{
+					system("cls");
+					line_1 = line_1 + line_2;
+					std::cout << "Successfully" << std::endl;
+					std::cin.get();
+				}
+				if (m1 == 50)
+				{
+					system("cls");
+					line_2 = line_2 + line_1;
+					std::cout << "Successfully" << std::endl;
+					std::cin.get();
+				}
+			}
+		}
+		if (m == 56)
 		{
 			system("cls");
-			int m = Menu();
-			if (m == 27)
+			if (line_1 == line_2) std::cout << "Polylines are equal" << std::endl;
+			else std::cout << "Polylines aren't equal" << std::endl;
+			std::cin.get();
+		}
+		if (m == 57)
+		{
+			system("cls");
+			std::cout << "Input the N > 2" << std::endl;
+			int N = 0;
+			do
 			{
-				break;
-			}
-			if (m == 49)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
+				std::cin >> N;
+				if (N < 2)
+					std::cout << "Need N > 2 " << std::endl;
+			} while (N < 2);
+			PolyLine<collection2> line_3(N + 1);
+			unsigned radius = 100;
+			double angle = 0;
 
-						type a = 0, b = 0;
-						std::cout << "Real part x: ";
-						std::cin >> a;
-						std::cout << "Image part x: ";
-						std::cin >> b;
-						std::complex<type> X(a, b);
-						std::cout << "Real part y: ";
-						std::cin >> a;
-						std::cout << "Image part y: ";
-						std::cin >> b;
-						std::complex<type> Y(a, b);
-						//Point<tt> p(X, Y);
-						Point<collection2> p;
-						p.x = X;
-						p.y = Y;
-						try
-						{
-
-							line_1 += p;
-
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-						}
-
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						type a = 0, b = 0;
-						std::cout << "Real part x: ";
-						std::cin >> a;
-						std::cout << "Image part x: ";
-						std::cin >> b;
-						std::complex<type> X(a, b);
-						std::cout << "Real part y: ";
-						std::cin >> a;
-						std::cout << "Image part y: ";
-						std::cin >> b;
-						std::complex<type> Y(a, b);
-						//Point<tt> p(X, Y);
-						Point<collection2> p;
-						p.x = X;
-						p.y = Y;
-						try
-						{
-
-							line_1 += p;
-
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-						}
-
-					}
-				}
+			for (int i = 0; i < N + 1; i++) {
+				line_3[i].x = radius * cos(angle * 3.14 / 180) + 300;
+				line_3[i].y = radius * sin(angle * 3.14 / 180) + 300;
+				angle = angle + 360.0 / N;
 			}
 
-			if (m == 51)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
-						try
-						{
-							std::cout << line_1 << std::endl;
-							std::cout << "Line_1 lenght : " << line_1.GetLenght() << std::endl;
-							std::cin.get();
-						}
-						catch (std::exception& ex)
-						{
-							std::cout << ex.what() << std::endl;
-						}
-						std::cin.get();
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						try
-						{
-							std::cout << line_2 << std::endl;
-							std::cout << "Line_2 lenght : " << line_2.GetLenght() << std::endl;
-							std::cin.get();
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-						}
-						std::cin.get();
-					}
-				}
-			}
-			if (m == 52)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
-						std::cout << line_1 << std::endl;
-						std::cin.get();
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						std::cout << line_2 << std::endl;
-						std::cin.get();
-					}
-				}
-			}
-			if (m == 53)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
-						std::cout << "Enter index of element: " << std::endl;
-						int index;
-						std::cin >> index;
-						try
-						{
-							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
-							std::cout << "Enter new value: " << std::endl;
-							std::cin >> line_1[index].x;
-							std::cin >> line_1[index].y;
-							std::cin.get();
-
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-							std::cin.get();
-							std::cin.get();
-						}
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						std::cout << "Enter index of element: " << std::endl;
-						int index;
-						std::cin >> index;
-						try
-						{
-							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
-							std::cout << "Enter new value: " << std::endl;
-							std::cin >> line_2[index].x;
-							std::cin >> line_2[index].y;
-							std::cin.get();
-
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-							std::cin.get();
-							std::cin.get();
-						}
-					}
-				}
-			}
-			if (m == 54)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
-						std::cout << "Enter index of element: " << std::endl;
-						int index;
-						std::cin >> index;
-						try
-						{
-							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
-							std::cin.get();
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-							std::cin.get();
-							std::cin.get();
-						}
-						std::cin.get();
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						std::cout << "Enter index of element: " << std::endl;
-						int index;
-						std::cin >> index;
-						try
-						{
-							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
-							std::cin.get();
-						}
-						catch (const char* err)
-						{
-							std::cout << err << std::endl;
-							std::cin.get();
-							std::cin.get();
-						}
-						std::cin.get();
-					}
-				}
-			}
-			if (m == 55)
-			{
-				while (true)
-				{
-					system("cls");
-					int m1 = Menu_1();
-					if (m1 == 27) break;
-					if (m1 == 49)
-					{
-						system("cls");
-						line_1 = line_1 + line_2;
-						std::cout << "Successfully" << std::endl;
-						std::cin.get();
-					}
-					if (m1 == 50)
-					{
-						system("cls");
-						line_2 = line_2 + line_1;
-						std::cout << "Successfully" << std::endl;
-						std::cin.get();
-					}
-				}
-			}
-			if (m == 56)
-			{
-				system("cls");
-				if (line_1 == line_2) std::cout << "Polylines are equal" << std::endl;
-				else std::cout << "Polylines aren't equal" << std::endl;
-				std::cin.get();
-			}
-			if (m == 57)
-			{
-				system("cls");
-				std::cout << "Input the N > 2" << std::endl;
-				int N = 0;
-				do
-				{
-					std::cin >> N;
-					if (N < 2)
-						std::cout << "Need N > 2 " << std::endl;
-				} while (N < 2);
-				PolyLine<collection2> line_3(N + 1);
-				unsigned radius = 100;
-				double angle = 0;
-
-				for (int i = 0; i < N + 1; i++) {
-					line_3[i].x = radius * cos(angle * 3.14 / 180) + 300;
-					line_3[i].y = radius * sin(angle * 3.14 / 180) + 300;
-					angle = angle + 360.0 / N;
-				}
-
-				std::cout << line_3 << std::endl;
-				std::cin.get();
-				std::cin.get();
-
-			}
+			std::cout << line_3 << std::endl;
+			std::cin.get();
+			std::cin.get();
 
 		}
+
+	}
 	}
 	case 51:
 	{
@@ -791,6 +868,55 @@ int main()
 							std::cout << err << std::endl;
 						}
 
+					}
+				}
+			}
+			if (m == 50)
+			{
+				while (true)
+				{
+					system("cls");
+					int m1 = Menu_1();
+					if (m1 == 27) break;
+					if (m1 == 49)
+					{
+						system("cls");
+						Point<collection3> p;
+							std::cout << "Enter the coordinates of the point" << std::endl;
+							std::cout << "Enter x: " << std::endl;
+							std::cin >> p.x;
+							std::cout << "Enter y: " << std::endl;
+							std::cin >> p.y;
+						try
+						{
+							line_1 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+					if (m1 == 50)
+					{
+						system("cls");
+						Point<collection3> p;
+						std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;
+						try
+						{
+							//line_2 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
 					}
 				}
 			}
@@ -1081,6 +1207,55 @@ int main()
 					}
 				}
 			}
+			if (m == 50)
+			{
+				while (true)
+				{
+					system("cls");
+					int m1 = Menu_1();
+					if (m1 == 27) break;
+					if (m1 == 49)
+					{
+						system("cls");
+						Point<collection4> p;
+						std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;
+						try
+						{
+							line_1 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+					if (m1 == 50)
+					{
+						system("cls");
+						Point<collection4> p;
+						std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;
+						try
+						{
+							//line_2 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+				}
+			}
 			if (m == 51)
 			{
 				while (true)
@@ -1365,6 +1540,55 @@ int main()
 							std::cout << err << std::endl;
 						}
 
+					}
+				}
+			}
+			if (m == 50)
+			{
+				while (true)
+				{
+					system("cls");
+					int m1 = Menu_1();
+					if (m1 == 27) break;
+					if (m1 == 49)
+					{
+						system("cls");
+						Point<collection5> p;
+						std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;
+						try
+						{
+							line_1 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+					if (m1 == 50)
+					{
+						system("cls");
+						Point<collection5> p;
+						std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;
+						try
+						{
+							//line_2 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
 					}
 				}
 			}
