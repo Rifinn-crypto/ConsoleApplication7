@@ -29,8 +29,8 @@ public:
 	Point<T>& operator [] (const size_t index);
 	Point<T> operator [] (const size_t index) const;
 	PolyLine<T> operator + (const PolyLine<T>& polyline);
-	T operator == (const PolyLine<T>& polyline);
-	T operator != (const PolyLine<T>& polyline);
+	bool operator == (const PolyLine<T>& polyline);
+	bool operator != (const PolyLine<T>& polyline);
 	PolyLine<T>& operator = (const PolyLine<T>& polyline);
 	template <typename T> friend std::ostream& operator<< (std::ostream& out, const PolyLine<T>& polyline);
 };
@@ -51,8 +51,8 @@ public:
 	Point<std::complex<V>> operator [] (const size_t index) const;
 	Point<std::complex<V>>& operator [] (const size_t index);
 	PolyLine<std::complex<V>> operator + (const PolyLine<std::complex<V>>& polyline);
-	V operator == (const PolyLine<std::complex<V>>& polyline);
-	V operator != (const PolyLine<std::complex<V>>& polyline);
+	bool operator == (const PolyLine<std::complex<V>>& polyline);
+	bool operator != (const PolyLine<std::complex<V>>& polyline);
 	PolyLine<std::complex<V>>& operator = (const PolyLine<std::complex<V>>& polyline);
 	template <typename V> friend PolyLine<std::complex<V>> operator+=(PolyLine<std::complex<V>>& polyline, const Point<std::complex<V>>& point);
 	template <typename V> friend std::ostream& operator<< (std::ostream& out, const PolyLine<std::complex<V>>& polyline);

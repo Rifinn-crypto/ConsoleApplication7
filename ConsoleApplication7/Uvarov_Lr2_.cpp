@@ -72,7 +72,7 @@ int main()
 
 
 
-		using aboba = float;
+		using type = float;
 		PolyLine<tt> line_1, line_2, line_3;
 		while (true)
 		{
@@ -93,17 +93,17 @@ int main()
 					{
 						system("cls");
 
-						aboba a = 0, b = 0;
+						type a = 0, b = 0;
 						std::cout << "Real part x: ";
 						std::cin >> a;
 						std::cout << "Image part x: ";
 						std::cin >> b;
-						std::complex<aboba> X(a, b);
+						std::complex<type> X(a, b);
 						std::cout << "Real part y: ";
 						std::cin >> a;
 						std::cout << "Image part y: ";
 						std::cin >> b;
-						std::complex<aboba> Y(a, b);
+						std::complex<type> Y(a, b);
 						//Point<tt> p(X, Y);
 						Point<tt> p;
 						p.x = X;
@@ -123,17 +123,17 @@ int main()
 					if (m1 == 50)
 					{
 						system("cls");
-						aboba a = 0, b = 0;
+						type a = 0, b = 0;
 						std::cout << "Real part x: ";
 						std::cin >> a;
 						std::cout << "Image part x: ";
 						std::cin >> b;
-						std::complex<aboba> X(a, b);
+						std::complex<type> X(a, b);
 						std::cout << "Real part y: ";
 						std::cin >> a;
 						std::cout << "Image part y: ";
 						std::cin >> b;
-						std::complex<aboba> Y(a, b);
+						std::complex<type> Y(a, b);
 						//Point<tt> p(X, Y);
 						Point<tt> p;
 						p.x = X;
@@ -152,7 +152,65 @@ int main()
 					}
 				}
 			}
+			if (m == 50)
+			{
+				while (true)
+				{
+					system("cls");
+					int m1 = Menu_1();
+					if (m1 == 27) break;
+					if (m1 == 49)
+					{
+						system("cls");
 
+						type a = 0, b = 0;
+						std::cout << "Real part x: ";
+						std::cin >> a;
+						std::cout << "Image part x: ";
+						std::cin >> b;
+						std::complex<type> X(a, b);
+						std::cout << "Real part y: ";
+						std::cin >> a;
+						std::cout << "Image part y: ";
+						std::cin >> b;
+						std::complex<type> Y(a, b);
+						//Point<tt> p(X, Y);
+						Point<tt> p;
+						p.x = X;
+						p.y = Y;
+						try
+						{
+							line_1 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+					if (m1 == 50)
+					{
+						system("cls");
+						Point<tt> p;
+						/*std::cout << "Enter the coordinates of the point" << std::endl;
+						std::cout << "Enter x: " << std::endl;
+						std::cin >> p.x;
+						std::cout << "Enter y: " << std::endl;
+						std::cin >> p.y;*/
+						try
+						{
+							//line_2 + p;
+							//std::cin.get();
+						}
+						catch (const char* err)
+						{
+							std::cout << err << std::endl;
+						}
+						//std::cin.get();
+					}
+				}
+			}
 			if (m == 51)
 			{
 				while (true)
@@ -374,7 +432,7 @@ int main()
 	}
 	case 50:
 	{
-		using aboba = double;
+		using type = double;
 		PolyLine<collection2> line_1, line_2, line_3;
 		while (true)
 		{
@@ -395,17 +453,17 @@ int main()
 					{
 						system("cls");
 
-						aboba a = 0, b = 0;
+						type a = 0, b = 0;
 						std::cout << "Real part x: ";
 						std::cin >> a;
 						std::cout << "Image part x: ";
 						std::cin >> b;
-						std::complex<aboba> X(a, b);
+						std::complex<type> X(a, b);
 						std::cout << "Real part y: ";
 						std::cin >> a;
 						std::cout << "Image part y: ";
 						std::cin >> b;
-						std::complex<aboba> Y(a, b);
+						std::complex<type> Y(a, b);
 						//Point<tt> p(X, Y);
 						Point<collection2> p;
 						p.x = X;
@@ -425,17 +483,17 @@ int main()
 					if (m1 == 50)
 					{
 						system("cls");
-						aboba a = 0, b = 0;
+						type a = 0, b = 0;
 						std::cout << "Real part x: ";
 						std::cin >> a;
 						std::cout << "Image part x: ";
 						std::cin >> b;
-						std::complex<aboba> X(a, b);
+						std::complex<type> X(a, b);
 						std::cout << "Real part y: ";
 						std::cin >> a;
 						std::cout << "Image part y: ";
 						std::cin >> b;
-						std::complex<aboba> Y(a, b);
+						std::complex<type> Y(a, b);
 						//Point<tt> p(X, Y);
 						Point<collection2> p;
 						p.x = X;

@@ -107,7 +107,7 @@ template<typename T> inline Point<T> PolyLine<T>::operator [] (const size_t inde
 }
 
 
-template<typename T> inline PolyLine<T> PolyLine<T>::operator + (const PolyLine<T>& polyline)
+template<typename T>  PolyLine<T> PolyLine<T>::operator + (const PolyLine<T>& polyline)
 {
 	if (!vertex)
 		return polyline;
@@ -125,7 +125,7 @@ template<typename T> inline PolyLine<T> PolyLine<T>::operator + (const PolyLine<
 	return res;
 }
 
-template<typename T> inline T PolyLine<T>::operator == (const PolyLine<T>& polyline)
+template<typename T> bool PolyLine<T>::operator == (const PolyLine<T>& polyline)
 {
 	if (vertex != polyline.vertex)
 		return false;
@@ -139,7 +139,7 @@ template<typename T> inline T PolyLine<T>::operator == (const PolyLine<T>& polyl
 }
 
 
-template<typename T> inline T PolyLine<T>::operator != (const PolyLine<T>& polyline)
+template<typename T> bool PolyLine<T>::operator != (const PolyLine<T>& polyline)
 {
 	if (vertex != polyline.vertex) return true;
 	for (size_t i = 0; i < vertex; i++)
@@ -151,7 +151,7 @@ template<typename T> inline T PolyLine<T>::operator != (const PolyLine<T>& polyl
 }
 
 
-template<typename T> inline PolyLine<T>& PolyLine<T>::operator = (const PolyLine<T>& polyline)
+template<typename T> PolyLine<T>& PolyLine<T>::operator = (const PolyLine<T>& polyline)
 {
 	if (this == (&polyline))
 		return *this;
@@ -215,7 +215,7 @@ template<typename T> std::ostream& operator << (std::ostream& out, const PolyLin
 
 }
 
-template<typename V> inline
+template<typename V> 
 PolyLine<std::complex<V>>::PolyLine(const PolyLine<std::complex<V>>& p)
 {
 	arr = new Point<std::complex<V>>[p.vertex];
@@ -227,7 +227,7 @@ PolyLine<std::complex<V>>::PolyLine(const PolyLine<std::complex<V>>& p)
 }
 
 
-template<typename V> inline
+template<typename V>
 PolyLine<std::complex<V>>::PolyLine(int count)
 {
 	vertex = count;
@@ -291,7 +291,7 @@ template<typename V> std::ostream& operator << (std::ostream& out, const PolyLin
 }
 
 
-template<typename V> inline Point<std::complex<V>>& PolyLine<std::complex<V>>::operator [] (const size_t index)
+template<typename V> Point<std::complex<V>>& PolyLine<std::complex<V>>::operator [] (const size_t index)
 {
 	if (arr == nullptr)
 		throw "Line is empty";
@@ -300,7 +300,7 @@ template<typename V> inline Point<std::complex<V>>& PolyLine<std::complex<V>>::o
 }
 
 
-template<typename V> inline Point<std::complex<V>> PolyLine<std::complex<V>>::operator [] (const size_t index) const
+template<typename V> Point<std::complex<V>> PolyLine<std::complex<V>>::operator [] (const size_t index) const
 {
 	if (arr == nullptr) throw "Line is empty";
 	if ((index >= vertex) || (index < 0)) throw "Invalid index";
@@ -308,7 +308,7 @@ template<typename V> inline Point<std::complex<V>> PolyLine<std::complex<V>>::op
 }
 
 
-template<typename V> inline PolyLine<std::complex<V>> PolyLine<std::complex<V>>::operator+ (const PolyLine<std::complex<V>>& polyline)
+template<typename V> PolyLine<std::complex<V>> PolyLine<std::complex<V>>::operator+ (const PolyLine<std::complex<V>>& polyline)
 {
 	if (!vertex)
 		return polyline;
@@ -327,7 +327,7 @@ template<typename V> inline PolyLine<std::complex<V>> PolyLine<std::complex<V>>:
 }
 
 
-template<typename V> inline V PolyLine<std::complex<V>>::operator == (const PolyLine<std::complex<V>>& polyline)
+template<typename V> bool PolyLine<std::complex<V>>::operator == (const PolyLine<std::complex<V>>& polyline)
 {
 	if (vertex != polyline.vertex)
 		return false;
@@ -341,7 +341,7 @@ template<typename V> inline V PolyLine<std::complex<V>>::operator == (const Poly
 }
 
 
-template<typename V> inline V PolyLine<std::complex<V>>::operator != (const PolyLine<std::complex<V>>& polyline)
+template<typename V> bool PolyLine<std::complex<V>>::operator != (const PolyLine<std::complex<V>>& polyline)
 {
 	if (vertex != polyline.vertex) return true;
 	for (size_t i = 0; i < vertex; i++)
@@ -354,7 +354,7 @@ template<typename V> inline V PolyLine<std::complex<V>>::operator != (const Poly
 
 
 
-template<typename V> inline PolyLine<std::complex<V>>& PolyLine<std::complex<V>>::operator = (const PolyLine<std::complex<V>>& polyline)
+template<typename V> PolyLine<std::complex<V>>& PolyLine<std::complex<V>>::operator = (const PolyLine<std::complex<V>>& polyline)
 {
 	if (this == (&polyline))
 		return *this;
