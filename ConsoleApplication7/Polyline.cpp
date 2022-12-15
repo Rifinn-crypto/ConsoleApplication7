@@ -236,7 +236,7 @@ PolyLine<std::complex<V>>::PolyLine(int count)
 {
 	vertex = count;
 	arr = new Point<std::complex<V>>[count];
-	V a = 0, b = 0;
+	/*V a = 0, b = 0;
 	for (size_t i = 0; i < vertex; i++)
 	{
 		std::cout << "Real part x: ";
@@ -251,7 +251,7 @@ PolyLine<std::complex<V>>::PolyLine(int count)
 		std::cin >> b;
 		pp.y = std::complex<V>(a, b);
 		arr[i] = pp;
-	}
+	}*/
 }
 
 
@@ -419,9 +419,3 @@ template<typename V> double PolyLine<std::complex<V>>::GetLenght() const
 	return len;
 }
 
-std::complex<double> operator*(const std::complex<double>& v, double a)
-{
-	double x = v.real() * a;
-	double y = v.imag() * a;
-	return std::complex<double>(x, y);
-}
