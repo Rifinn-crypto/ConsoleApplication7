@@ -418,3 +418,10 @@ template<typename V> double PolyLine<std::complex<V>>::GetLenght() const
 	}
 	return len;
 }
+
+std::complex<double> operator*(const std::complex<double>& v, double a)
+{
+	double x = v.real() * a;
+	double y = v.imag() * a;
+	return std::complex<double>(x, y);
+}

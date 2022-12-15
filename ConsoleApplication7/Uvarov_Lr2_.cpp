@@ -425,8 +425,8 @@ int main()
 						std::cout << "Need N > 2 " << std::endl;
 				} while (N < 2);
 				PolyLine<tt> line_3(N + 1);
-				std::complex<float> radius(100, 0);
-				std::complex<float> angle(0,0);
+				unsigned radius = 100;
+				double angle = 0;
 
 				for (int i = 0; i < N + 1; i++) {
 					line_3[i].x = radius * cos(angle * 3.14 / 180) + 300;
@@ -439,6 +439,7 @@ int main()
 				std::cin.get();
 
 			}
+			
 
 		} break;
 	}

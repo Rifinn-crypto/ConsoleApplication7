@@ -57,4 +57,5 @@ public:
 	template <typename V> friend PolyLine<std::complex<V>> operator+=(PolyLine<std::complex<V>>& polyline, const Point<std::complex<V>>& point);
 	template <typename V> friend std::ostream& operator<< (std::ostream& out, const PolyLine<std::complex<V>>& polyline);
 
+
 };
