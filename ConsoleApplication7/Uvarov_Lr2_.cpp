@@ -298,8 +298,19 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
-							std::cin >> line_1[index].x;
-							std::cin >> line_1[index].y;
+							type a = 0, b = 0;
+							std::cout << "Real part x: ";
+							std::cin >> a;
+							std::cout << "Image part x: ";
+							std::cin >> b;
+							std::complex<type> X(a, b);
+							std::cout << "Real part y: ";
+							std::cin >> a;
+							std::cout << "Image part y: ";
+							std::cin >> b;
+							std::complex<type> Y(a, b);
+							line_1[index].x = X;
+							line_1[index].y = Y;
 							std::cin.get();
 
 						}
@@ -320,9 +331,21 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
-							std::cin >> line_2[index].x;
-							std::cin >> line_2[index].y;
+							type a = 0, b = 0;
+							std::cout << "Real part x: ";
+							std::cin >> a;
+							std::cout << "Image part x: ";
+							std::cin >> b;
+							std::complex<type> X(a, b);
+							std::cout << "Real part y: ";
+							std::cin >> a;
+							std::cout << "Image part y: ";
+							std::cin >> b;
+							std::complex<type> Y(a, b);
+							line_2[index].x = X;
+							line_2[index].y = Y;
 							std::cin.get();
+							
 
 						}
 						catch (const char* err)
@@ -671,8 +694,19 @@ int main()
 					{
 						std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
 						std::cout << "Enter new value: " << std::endl;
-						std::cin >> line_1[index].x;
-						std::cin >> line_1[index].y;
+						type a = 0, b = 0;
+						std::cout << "Real part x: ";
+						std::cin >> a;
+						std::cout << "Image part x: ";
+						std::cin >> b;
+						std::complex<type> X(a, b);
+						std::cout << "Real part y: ";
+						std::cin >> a;
+						std::cout << "Image part y: ";
+						std::cin >> b;
+						std::complex<type> Y(a, b);
+						line_1[index].x = X;
+						line_1[index].y = Y;
 						std::cin.get();
 
 					}
@@ -693,8 +727,19 @@ int main()
 					{
 						std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
 						std::cout << "Enter new value: " << std::endl;
-						std::cin >> line_2[index].x;
-						std::cin >> line_2[index].y;
+						type a = 0, b = 0;
+						std::cout << "Real part x: ";
+						std::cin >> a;
+						std::cout << "Image part x: ";
+						std::cin >> b;
+						std::complex<type> X(a, b);
+						std::cout << "Real part y: ";
+						std::cin >> a;
+						std::cout << "Image part y: ";
+						std::cin >> b;
+						std::complex<type> Y(a, b);
+						line_2[index].x = X;
+						line_2[index].y = Y;
 						std::cin.get();
 
 					}
@@ -1003,7 +1048,9 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_1[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_1[index].y;
 							std::cin.get();
 
@@ -1025,8 +1072,12 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_2[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_2[index].y;
+							std::cin.get();
+
 							std::cin.get();
 
 						}
@@ -1341,9 +1392,12 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_1[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_1[index].y;
 							std::cin.get();
+
 
 						}
 						catch (const char* err)
@@ -1363,9 +1417,12 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_2[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_2[index].y;
 							std::cin.get();
+
 
 						}
 						catch (const char* err)
@@ -1679,9 +1736,13 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_1[index].x << ";" << line_1[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_1[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_1[index].y;
 							std::cin.get();
+
+						
 
 						}
 						catch (const char* err)
@@ -1701,9 +1762,13 @@ int main()
 						{
 							std::cout << "Your element: " << "[" << line_2[index].x << ";" << line_2[index].y << "]" << std::endl;
 							std::cout << "Enter new value: " << std::endl;
+							std::cout << "Enter X: ";
 							std::cin >> line_2[index].x;
+							std::cout << "Enter Y: ";
 							std::cin >> line_2[index].y;
 							std::cin.get();
+
+						
 
 						}
 						catch (const char* err)
