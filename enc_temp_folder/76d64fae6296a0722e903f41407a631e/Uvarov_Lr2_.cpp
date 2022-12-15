@@ -393,7 +393,6 @@ int main()
 						system("cls");
 						line_1 = line_1 + line_2;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_1;
 						std::cin.get();
 					}
 					if (m1 == 50)
@@ -401,7 +400,6 @@ int main()
 						system("cls");
 						line_2 = line_2 + line_1;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_2;
 						std::cin.get();
 					}
 				}
@@ -425,8 +423,8 @@ int main()
 						std::cout << "Need N > 2 " << std::endl;
 				} while (N < 2);
 				PolyLine<tt> line_3(N + 1);
-				std::complex<float> radius(100, 0);
-				std::complex<float> angle(0,0);
+				unsigned radius = 100;
+				double angle = 0;
 
 				for (int i = 0; i < N + 1; i++) {
 					line_3[i].x = radius * cos(angle * 3.14 / 180) + 300;
@@ -914,7 +912,7 @@ int main()
 						std::cin >> p.y;
 						try
 						{
-							line_2 + p;
+							//line_2 + p;
 							//std::cin.get();
 						}
 						catch (const char* err)
@@ -1097,7 +1095,6 @@ int main()
 						system("cls");
 						line_1 = line_1 + line_2;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_1;
 						std::cin.get();
 					}
 					if (m1 == 50)
@@ -1105,7 +1102,6 @@ int main()
 						system("cls");
 						line_2 = line_2 + line_1;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_2;
 						std::cin.get();
 					}
 				}
@@ -1252,7 +1248,7 @@ int main()
 						std::cin >> p.y;
 						try
 						{
-							line_2 + p;
+							//line_2 + p;
 							//std::cin.get();
 						}
 						catch (const char* err)
@@ -1435,7 +1431,6 @@ int main()
 						system("cls");
 						line_1 = line_1 + line_2;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_1;
 						std::cin.get();
 					}
 					if (m1 == 50)
@@ -1443,7 +1438,6 @@ int main()
 						system("cls");
 						line_2 = line_2 + line_1;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_2;
 						std::cin.get();
 					}
 				}
@@ -1590,7 +1584,7 @@ int main()
 						std::cin >> p.y;
 						try
 						{
-							line_2 + p;
+							//line_2 + p;
 							//std::cin.get();
 						}
 						catch (const char* err)
@@ -1773,7 +1767,6 @@ int main()
 						system("cls");
 						line_1 = line_1 + line_2;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_1;
 						std::cin.get();
 					}
 					if (m1 == 50)
@@ -1781,7 +1774,6 @@ int main()
 						system("cls");
 						line_2 = line_2 + line_1;
 						std::cout << "Successfully" << std::endl;
-						std::cout << line_2;
 						std::cin.get();
 					}
 				}

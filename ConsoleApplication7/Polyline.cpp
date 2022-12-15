@@ -197,7 +197,11 @@ template std::ostream& operator<< (std::ostream& out, const PolyLine<double>& v1
 template<typename T> std::ostream& operator << (std::ostream& out, const PolyLine<T>& polyline)
 {
 	out << "Polyline <";
-
+	if (!polyline.vertex)
+	{
+		out << " >";
+		return out;
+	}
 	for (size_t i = 0; i < polyline.vertex; i++)
 	{
 		out << "vertex[" << i << "]: " << "(" << polyline.arr[i].x << "," << polyline.arr[i].y;
